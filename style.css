@@ -1,0 +1,323 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #E1D4C9;
+  color: #403F3D;
+  font-family: 'Inter', sans-serif; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Ссылки берут цвет у родителя */
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- СЕТКА ХЕДЕРА --- */
+.head {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 40px;
+}
+
+
+.main-nav ul {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+
+}
+
+.main-nav a {
+  font-weight: 600;
+}
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.dark-lig {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #C1B6AD;
+  border-radius: 20px; 
+  padding: 4px;
+}
+
+.sun, .moon {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%; 
+  padding: 4.5px;
+  transition: background-color 0.3s ease; 
+}
+.sun {
+  background-color: #B0907A; 
+}
+.moon {
+    color: #E1D4C9;
+  background-color: transparent;
+}
+
+
+
+
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+}
+
+.header-actions {
+    gap: 24px;
+}
+
+/* --- хвоерчики ХЕДЕРА --- */
+.main-nav a{
+
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+   color: #B0907A;
+   transform: translate(0,-2px);
+ text-shadow: 0 8px 15px #cebeb2;
+
+}
+
+.menu a img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu a:hover {
+  transform: translateY(-2px);
+  color: #B0907A;
+  text-shadow: 0 8px 15px #cebeb2;
+}
+
+
+.menu a:hover img {
+  transform: rotate(12deg) scale(1.1); 
+
+}
+
+.moon:hover {
+  background-color: #665F55;
+}
+
+/* --- хиро секциия --- */
+
+.head, main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0 40px;
+
+}
+.hero-inner {
+    background-image: url(imgs/heroImg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 600;
+    max-width: 600px;
+    color: #E1D4C9;
+    line-height: 1.05;
+    
+}
+
+.hero-title .first {
+    font-style: italic;
+    color: #B0907A;
+}
+
+.hero-text {
+    font-weight: 400;
+    color: #E1D4C9;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 530px; 
+}
+
+.hero-btn {
+   display: inline-flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; /* Центрируем по горизонтали */
+    background-color: #E1D4C9;
+    color: #403F3D;
+    padding-top: 20px;
+    padding-right: 78px;
+    padding-left: 78px;
+    padding-bottom: 20px;
+    gap: 8px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+
+}
+.hero-btn img {
+  opacity: 0;
+  width: 0; /* Схлопываем размер, чтобы текст "Menu" стоял ровно по центру в дефолтном состоянии */
+  margin-left: 0;
+  transition: all 0.3s ease;
+}
+/* --- хиро кнопка меню ховерок --- */
+
+
+.hero-btn:hover img {
+  opacity: 1;
+  width: 20px; /* Возвращаем видимый размер картинке */
+}
+
+/* --- секция кофейка FAVORITE COFFEE --- */
+
+/* --- секция кофейка FAVORITE COFFEE --- */
+.favorite {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #403F3D;
+  margin-bottom: 40px;
+  text-align: center; /* Центрируем текст вместо жесткой ширины */
+}
+
+.favorite-title em {
+  font-style: italic;
+  color: #B0907A;
+}
+
+/* кнопочки и каруселька --- */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; 
+  width: 100%; /* Возвращаем 100%, чтобы элементы могли дышать */
+}
+
+.slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #665F55;
+  background-color: transparent;
+  color: #403F3D;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ховер для стрелок */
+.slider-arrow:hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+}
+
+.slider-arrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+}
+
+.slider-img {
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+
+.slider-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403F3D;
+  margin-bottom: 16px;
+}
+
+.slider-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #403F3D;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.slider-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403F3D;
+}
+/* карулселька */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 40px;
+  height: 4px;
+  background-color: #C1B6AD;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #403F3D;
+}
