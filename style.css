@@ -212,3 +212,112 @@ main {
   opacity: 1;
   width: 20px; /* Возвращаем видимый размер картинке */
 }
+
+/* --- секция кофейка FAVORITE COFFEE --- */
+
+/* --- секция кофейка FAVORITE COFFEE --- */
+.favorite {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #403F3D;
+  margin-bottom: 40px;
+  text-align: center; /* Центрируем текст вместо жесткой ширины */
+}
+
+.favorite-title em {
+  font-style: italic;
+  color: #B0907A;
+}
+
+/* кнопочки и каруселька --- */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; 
+  width: 100%; /* Возвращаем 100%, чтобы элементы могли дышать */
+}
+
+.slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #665F55;
+  background-color: transparent;
+  color: #403F3D;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ховер для стрелок */
+.slider-arrow:hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+}
+
+.slider-arrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+}
+
+.slider-img {
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+
+.slider-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403F3D;
+  margin-bottom: 16px;
+}
+
+.slider-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #403F3D;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.slider-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403F3D;
+}
+/* карулселька */
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 40px;
+  height: 4px;
+  background-color: #C1B6AD;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #403F3D;
+}
