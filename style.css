@@ -70,23 +70,70 @@ html {
   padding: 4px;
 }
 
-.sun {
-  padding-right: 10px;
+.sun, .moon {
   height: 22px;
   width: 22px;
-  background-color: #B0907A; 
   border-radius: 50%; 
-  padding: 4.5px; 
+  padding: 4.5px;
+  transition: background-color 0.3s ease; 
 }
+.sun {
+  background-color: #B0907A; 
+}
+.moon {
+    color: #E1D4C9;
+  background-color: transparent;
+}
+
+.moon img {
+  transition: filter 0.3s ease;
+}
+
+
 
 .menu a {
   display: flex;
   align-items: center;
   gap: 8px;
   font-weight: 600;
+  transition: all 0.3s ease;
+  
 }
 
 .header-actions {
     gap: 24px;
 }
 
+/* --- хвоерчики ХЕДЕРА --- */
+.main-nav a{
+
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+   color: #B0907A;
+   transform: translate(0,-2px);
+ text-shadow: 0 8px 15px #cebeb2;
+
+}
+
+.menu a img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu a:hover {
+  transform: translateY(-2px);
+  color: #B0907A;
+  text-shadow: 0 8px 15px #cebeb2;
+}
+
+
+.menu a:hover img {
+  transform: rotate(12deg) scale(1.1); 
+
+}
+
+.moon:hover {
+  background-color: #665F55;
+}
