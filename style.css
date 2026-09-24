@@ -85,9 +85,7 @@ html {
   background-color: transparent;
 }
 
-.moon img {
-  transition: filter 0.3s ease;
-}
+
 
 
 
@@ -136,4 +134,81 @@ html {
 
 .moon:hover {
   background-color: #665F55;
+}
+
+/* --- хиро секциия --- */
+
+.head, main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0 40px;
+
+}
+.hero-inner {
+    background-image: url(imgs/heroImg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 600;
+    max-width: 600px;
+    color: #E1D4C9;
+    line-height: 1.05;
+    
+}
+
+.hero-title .first {
+    font-style: italic;
+    color: #B0907A;
+}
+
+.hero-text {
+    font-weight: 400;
+    color: #E1D4C9;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 530px; 
+}
+
+.hero-btn {
+   display: inline-flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; /* Центрируем по горизонтали */
+    background-color: #E1D4C9;
+    color: #403F3D;
+    padding-top: 20px;
+    padding-right: 78px;
+    padding-left: 78px;
+    padding-bottom: 20px;
+    gap: 8px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+
+}
+.hero-btn img {
+  opacity: 0;
+  width: 0; /* Схлопываем размер, чтобы текст "Menu" стоял ровно по центру в дефолтном состоянии */
+  margin-left: 0;
+  transition: all 0.3s ease;
+}
+/* --- хиро кнопка меню ховерок --- */
+
+
+.hero-btn:hover img {
+  opacity: 1;
+  width: 20px; /* Возвращаем видимый размер картинке */
 }
