@@ -7,339 +7,161 @@
     <title>Document</title>
 </head>
 <body>
-     <header class="head">
-    <!-- Левая часть -->
+  <header class="head">
     <a href="index.html" class="logo"><img src="imgs/logo (1).png" alt="Logo"></a>
    
-    <!-- Центральная часть -->
-    <nav class="main-nav">
+    <!-- Навигация -->
+<nav class="main-nav" id="main-nav">
      <ul>
-       <li><a href="#favorite-coffee">Favorite coffee</a></li>
-       <li><a href="#about">About</a></li>
-       <li><a href="#mobile-app">Mobile app</a></li>
-       <li><a href="#contact-us">Contact us</a></li>
+       <li><a href="index.html#favorite-coffee">Favorite coffee</a></li>
+       <li><a href="index.html#about">About</a></li>
+       <li><a href="index.html#mobile-app">Mobile app</a></li>
+       <li><a href="index.html#contact-us">Contact us</a></li>
+       
+       <!-- ЭТА КНОПКА ПОЯВИТСЯ ТОЛЬКО В БУРГЕРЕ НА МОБИЛКАХ -->
+       <li class="mobile-menu-link">
+         <a href="catalog.html">Menu<img src="imgs/coffee-cup.png" alt="Cup"></a>
+       </li>
      </ul>
     </nav>
   
-    <!-- Правая часть -->
+    <!-- Кнопка Бургера (появится только на мобилках) -->
+    <div class="burger-btn" id="burger-btn">
+      <span></span>
+      <span></span>
+    </div>
+
     <div class="header-actions">
       <div class="dark-lig">
-        <a href="#"><img src="imgs/Sun.png" alt="Sun" class="sun"></a>
-        <a href="#"><img src="imgs/Moon.svg" alt="Moon" class="moon"></a>
-        
+        <a href="#" id="theme-light"><img src="imgs/Sun.png" alt="Sun" class="sun"></a>
+        <a href="#" id="theme-dark"><img src="imgs/Moon.svg" alt="Moon" class="moon"></a>
       </div>
       <div class="menu">
         <a href="catalog.html">Menu<img src="imgs/coffee-cup.png" alt="Cup"></a>
       </div>
     </div>
   </header>
-    <main class="menu-page">
-  <h1 class="menu-title">
-    Behind each of our cups<br>hides an <em>amazing surprise</em>
-  </h1>
+   <main class="menu-page">
+      <h1 class="menu-title">
+        Behind each of our cups<br>hides an <em>amazing surprise</em>
+      </h1>
 
-  <!-- Табы переключения категорий -->
-  <div class="menu-tabs">
-    <button class="tab-btn active">
-      <span class="tab-icon"><img src="imgs/coffe-icon.png" alt="Coffee"></span> Coffee
-    </button>
-    <button class="tab-btn">
-      <span class="tab-icon"><img src="imgs/tea-icon.png" alt="Tea"></span> Tea
-    </button>
-    <button class="tab-btn">
-      <span class="tab-icon"><img src="imgs/dessert.png" alt="Dessert"></span> Dessert
-    </button>
-  </div>
+      <!-- Табы переключения категорий -->
+      <div class="menu-tabs">
+        <button class="tab-btn active">
+          <span class="tab-icon"><img src="imgs/coffe-icon.png" alt="Coffee"></span> Coffee
+        </button>
+        <button class="tab-btn">
+          <span class="tab-icon"><img src="imgs/tea-icon.png" alt="Tea"></span> Tea
+        </button>
+        <button class="tab-btn">
+          <span class="tab-icon"><img src="imgs/dessert.png" alt="Dessert"></span> Dessert
+        </button>
+      </div>
 
-  <!-- Сетка карточек -->
-  <div class="menu-grid">
-    <!-- Карточка 1 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-1.jpg" alt="Irish coffee">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Irish coffee</h3>
-        <p class="card-desc">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-        <span class="card-price">$7.00</span>
-      </div>
-    </div>
+      <!-- ЕДИНСТВЕННАЯ сетка, куда JS будет загружать карточки -->
+      <div class="menu-grid" id="menu-grid"></div>
 
-    <!-- Карточка 2 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-2.jpg" alt="Kahlua coffee">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Kahlua coffee</h3>
-        <p class="card-desc">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-        <span class="card-price">$7.00</span>
-      </div>
-    </div>
+      <!-- Кнопка загрузки для мобильных экранов -->
+      <button class="load-more-btn hidden" id="load-more-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
-    <!-- Карточка 3 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-3.jpg" alt="Honey raf">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Honey raf</h3>
-        <p class="card-desc">Espresso with frothed milk, cream and aromatic honey</p>
-        <span class="card-price">$5.50</span>
-      </div>
-    </div>
+    </main>
 
-    <!-- Карточка 4 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-4.jpg" alt="Ice cappuccino">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Ice cappuccino</h3>
-        <p class="card-desc">Cappuccino with soft thick foam in summer version with ice</p>
-        <span class="card-price">$5.00</span>
-      </div>
-    </div>
-
-    <!-- Карточка 5 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-5.jpg" alt="Espresso">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Espresso</h3>
-        <p class="card-desc">Classic black coffee</p>
-        <span class="card-price">$4.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 6 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-6.jpg" alt="Latte">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Latte</h3>
-        <p class="card-desc">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-        <span class="card-price">$5.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 7 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-7.jpg" alt="Latte macchiato">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Latte macchiato</h3>
-        <p class="card-desc">Espresso with frothed milk and chocolate</p>
-        <span class="card-price">$5.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 8 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/coffee-8.jpg" alt="Coffee with cognac">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Coffee with cognac</h3>
-        <p class="card-desc">Fragrant black coffee with cognac and whipped cream</p>
-        <span class="card-price">$6.50</span>
-      </div>
-    </div>
-  </div>
-  <!-- Сетка Чая (изначально скрыта) -->
-  <div class="menu-grid hidden" id="grid-tea">
-    <!-- Карточка 1 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/tea-1.png" alt="Moroccan">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Moroccan</h3>
-        <p class="card-desc">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
-        <span class="card-price">$4.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 2 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/tea-2.png" alt="Ginger">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Ginger</h3>
-        <p class="card-desc">Original black tea with fresh ginger, lemon and honey</p>
-        <span class="card-price">$5.00</span>
-      </div>
-    </div>
-
-    <!-- Карточка 3 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/tea-3.png" alt="Cranberry">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Cranberry</h3>
-        <p class="card-desc">Invigorating black tea with cranberry and honey</p>
-        <span class="card-price">$5.00</span>
-      </div>
-    </div>
-
-    <!-- Карточка 4 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/tea-4.png" alt="Sea buckthorn">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Sea buckthorn</h3>
-        <p class="card-desc">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
-        <span class="card-price">$5.50</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Сетка Десертов (изначально скрыта) -->
-  <div class="menu-grid hidden" id="grid-dessert">
-    <!-- Карточка 1 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-1.png" alt="Marble cheesecake">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Marble cheesecake</h3>
-        <p class="card-desc">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
-        <span class="card-price">$3.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 2 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-2.png" alt="Red velvet">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Red velvet</h3>
-        <p class="card-desc">Layer cake with cream cheese frosting</p>
-        <span class="card-price">$4.00</span>
-      </div>
-    </div>
-
-    <!-- Карточка 3 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-3.png" alt="Cheesecakes">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Cheesecakes</h3>
-        <p class="card-desc">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
-        <span class="card-price">$4.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 4 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-4.png" alt="Creme brulee">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Creme brulee</h3>
-        <p class="card-desc">Delicate creamy dessert in a caramel basket with wild berries</p>
-        <span class="card-price">$4.00</span>
-      </div>
-    </div>
-
-    <!-- Карточка 5 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-5.png" alt="Pancakes">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Pancakes</h3>
-        <p class="card-desc">Tender pancakes with strawberry jam and fresh strawberries</p>
-        <span class="card-price">$4.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 6 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-6.png" alt="Honey cake">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Honey cake</h3>
-        <p class="card-desc">Classic honey cake with delicate custard</p>
-        <span class="card-price">$4.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 7 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-7.png" alt="Chocolate cake">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Chocolate cake</h3>
-        <p class="card-desc">Cake with hot chocolate filling and nuts with dried apricots</p>
-        <span class="card-price">$5.50</span>
-      </div>
-    </div>
-
-    <!-- Карточка 8 -->
-    <div class="menu-card">
-      <div class="card-img">
-        <img src="imgs/dessert-8.png" alt="Black forest">
-      </div>
-      <div class="card-content">
-        <h3 class="card-name">Black forest</h3>
-        <p class="card-desc">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
-        <span class="card-price">$6.50</span>
-      </div>
-    </div>
-  </div>
-</main>
-<!-- ФУТЕР -->
-<footer class="footer" id="contact-us">
-  <div class="footer-container">
-    <!-- Левая часть футера -->
-    <div class="footer-left">
-      <h2 class="footer-title">Sip, Savor, Smile. <br><em>It's coffee time!</em></h2>
-      <div class="socials">
-  <a href="https://twitter.com" target="_blank" class="social-link">
-    <img src="imgs/twitter.png" alt="Twitter">
-  </a>
-  
-  <a href="https://instagram.com" target="_blank" class="social-link">
-    <img src="imgs/instagram.png" alt="Instagram">
-  </a>
-  
-  <a href="https://facebook.com" target="_blank" class="social-link">
-    <img src="imgs/facebook-icon.png" alt="Facebook">
-  </a>
-</div>
-    </div>
-    
-    <!-- Правая часть футера -->
-    <div class="footer-right">
-      <h3 class="contact-title">Contact us</h3>
-      <ul class="contact-list">
-        <li>
+    <!-- ФУТЕР -->
+    <footer class="footer" id="contact-us">
+      <div class="footer-container">
+        <!-- Левая часть футера -->
+        <div class="footer-left">
+          <h2 class="footer-title">Sip, Savor, Smile. <br><em>It's coffee time!</em></h2>
+          <div class="socials">
+            <a href="https://twitter.com" target="_blank" class="social-link">
+              <img src="imgs/twitter.png" alt="Twitter">
+            </a>
+            
+            <a href="https://instagram.com" target="_blank" class="social-link">
+              <img src="imgs/instagram.png" alt="Instagram">
+            </a>
+            
+            <a href="https://facebook.com" target="_blank" class="social-link">
+              <img src="imgs/facebook-icon.png" alt="Facebook">
+            </a>
+          </div>
+        </div>
         
-          <span><img src="imgs/pin-alt (1).svg" alt=""></span> 8558 Green Rd., LA
-        </li>
-        <li>
-         
-          <span><img src="imgs/phone.png" alt=""></span> +1 (603) 555-0123
-        </li>
-        <li>
-         
-          <span><img src="imgs/clock.png" alt=""></span> Mon-Sat: 9:00-23:00
-        </li>
-      </ul>
+        <!-- Правая часть футера -->
+        <div class="footer-right">
+          <h3 class="contact-title">Contact us</h3>
+          <ul class="contact-list">
+            <li>
+              <span><img src="imgs/pin-alt (1).svg" alt=""></span> 8558 Green Rd., LA
+            </li>
+            <li>
+              <span><img src="imgs/phone.png" alt=""></span> +1 (603) 555-0123
+            </li>
+            <li>
+              <span><img src="imgs/clock.png" alt=""></span> Mon-Sat: 9:00-23:00
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Оверлей и модальное окно -->
+    <div class="modal-overlay hidden" id="modal-overlay">
+      <div class="modal">
+        <div class="modal-img-wrapper">
+          <img src="imgs/coffee-1.jpg" alt="Irish coffee" id="modal-img">
+        </div>
+        <div class="modal-details">
+          <div>
+            <h3 class="modal-title" id="modal-title">Irish coffee</h3>
+            <p class="modal-desc" id="modal-desc">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+          </div>
+          
+          <!-- Блок размеров -->
+          <div class="modal-section">
+            <span class="modal-subtitle">Size</span>
+            <div class="modal-options" id="modal-sizes">
+              <button class="param-btn active"><span class="param-icon">S</span> 200 ml</button>
+              <button class="param-btn"><span class="param-icon">M</span> 300 ml</button>
+              <button class="param-btn"><span class="param-icon">L</span> 400 ml</button>
+            </div>
+          </div>
+
+          <!-- Блок добавок -->
+          <div class="modal-section">
+            <span class="modal-subtitle">Additives</span>
+            <div class="modal-options" id="modal-additives">
+              <button class="param-btn"><span class="param-icon">1</span> Sugar</button>
+              <button class="param-btn"><span class="param-icon">2</span> Cinnamon</button>
+              <button class="param-btn"><span class="param-icon">3</span> Syrup</button>
+            </div>
+          </div>
+
+          <!-- Итоговая цена -->
+          <div class="modal-total">
+            <span>Total:</span>
+            <span id="modal-price">$7.00</span>
+          </div>
+
+          <!-- Инфо-текст -->
+          <div class="modal-alert">
+            <span>&#9432;</span>
+            <p>The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+          </div>
+
+          <button class="modal-close" id="modal-close">Close</button>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
-  
+
+    <!-- Скрипт -->
+    <script src="app.js"></script>
+
 </body>
 </html>

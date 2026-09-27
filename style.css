@@ -683,3 +683,476 @@ main {
   font-weight: 600;
   color: #403F3D;
 }
+
+/* --- модал окошко  */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 63, 61, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: flex !important; 
+}
+
+.modal {
+  background-color: #E1D4C9;
+  border-radius: 40px;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto; /*  если экран маленький */
+}
+
+.modal-img-wrapper {
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.modal-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.modal-desc {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-subtitle {
+  font-size: 16px;
+}
+
+.modal-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.param-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid #C1B6AD;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #403F3D;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.param-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #C1B6AD;
+  border-radius: 50%;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.param-btn:hover,
+.param-btn.active {
+  background-color: #665F55;
+  color: #E1D4C9;
+}
+
+.param-btn:hover .param-icon,
+.param-btn.active .param-icon {
+  background-color: #E1D4C9;
+  color: #403F3D;
+}
+
+.modal-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-alert {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #C1B6AD;
+  padding-top: 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.modal-close {
+  padding: 10px;
+  border: 1px solid #665F55;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #403F3D;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+}
+
+/* ТЕМНОТА!!!!! */
+body.dark-theme {
+  background-color: #2b2b2b; 
+  color: #E1D4C9;
+}
+
+body.dark-theme .about-title,
+body.dark-theme .favorite-title,
+body.dark-theme .app-title,
+body.dark-theme .app-desc,
+body.dark-theme .menu-title,
+body.dark-theme .card-name,
+body.dark-theme .card-desc,
+body.dark-theme .card-price,
+body.dark-theme .slider-name,
+body.dark-theme .slider-desc,
+body.dark-theme .slider-price {
+  color: #E1D4C9;
+}
+
+body.dark-theme .modal {
+  background-color: #2b2b2b;
+  color: #E1D4C9;
+}
+
+body.dark-theme .menu-card {
+  border-color: #665F55;
+}
+
+
+/* Навигация */
+body.dark-theme .main-nav a:hover {
+  color: #E1D4C9;
+  text-shadow: 0 8px 15px rgba(225, 212, 201, 0.2);
+}
+
+
+body.dark-theme .tab-btn,
+body.dark-theme .param-btn {
+  color: #E1D4C9;
+  border-color: #E1D4C9;
+}
+
+body.dark-theme .tab-btn:hover,
+body.dark-theme .param-btn:hover,
+body.dark-theme .tab-btn.active,
+body.dark-theme .param-btn.active {
+  background-color: #E1D4C9;
+  color: #2b2b2b;
+}
+
+body.dark-theme .param-btn:hover .param-icon,
+body.dark-theme .param-btn.active .param-icon {
+  background-color: #2b2b2b;
+  color: #E1D4C9;
+}
+
+
+body.dark-theme .app-btn,
+body.dark-theme .modal-close {
+  color: #E1D4C9;
+  border-color: #E1D4C9;
+}
+
+body.dark-theme .app-btn:hover,
+body.dark-theme .modal-close:hover {
+  background-color: #E1D4C9;
+  color: #2b2b2b;
+}
+
+/* сссстрелки слайдера */
+body.dark-theme .slider-arrow {
+  border-color: #E1D4C9;
+  color: #E1D4C9;
+}
+
+body.dark-theme .slider-arrow:hover {
+  background-color: #E1D4C9;
+}
+
+
+body.dark-theme .slider-arrow img {
+  filter: brightness(0) invert(1);
+}
+
+
+body.dark-theme .slider-arrow:hover img {
+  filter: brightness(0);
+}
+
+
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 100;
+  border: 1px solid #665F55;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.burger-btn span {
+  width: 16px;
+  height: 2px;
+  background-color: #403F3D;
+  transition: all 0.3s ease;
+}
+body.dark-theme .burger-btn span { background-color: #E1D4C9; }
+
+/* планшетка */
+@media (max-width: 768px) {
+  /* --- ХЕДЕР И БУРГЕР  */
+  .burger-btn {
+    display: flex; /* БУПЕР*/
+  }
+  .menu {
+    display: none; /*чашка */
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 100px; 
+    right: -100%; 
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #E1D4C9;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    transition: right 0.4s ease;
+    z-index: 90;
+  }
+ 
+  body.dark-theme .main-nav { background-color: #2b2b2b; }
+
+  .main-nav.open {
+    right: 0; 
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    font-size: 24px;
+  }
+
+  .burger-btn.active span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .burger-btn.active span:nth-child(2) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  /* глав*/
+  .hero-inner {
+    padding: 100px 60px;
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr; 
+  }
+
+  .mobile-app {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 60px;
+  }
+
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки для товаров */
+  }
+
+
+  .modal {
+    max-width: 688px; 
+  }
+}
+
+.mobile-menu-link {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .mobile-menu-link {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .mobile-menu-link a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+  
+  .mobile-menu-link a img {
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-menu-link a:hover img {
+    transform: rotate(12deg) scale(1.1);
+  }
+}
+
+/* мобилки  */
+@media (max-width: 380px) {
+ 
+  .head {
+    padding: 20px 16px;
+  }
+  main {
+    padding: 0 16px;
+  }
+  .menu-page {
+    padding: 40px 16px 60px 16px;
+  }
+
+
+  .hero-title {
+    font-size: 42px;
+  }
+  .about-title, 
+  .favorite-title, 
+  .app-title, 
+  .menu-title, 
+  .footer-title {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .hero-inner {
+    padding: 60px 16px;
+  }
+  .about {
+    margin-top: 60px;
+    gap: 40px;
+  }
+  
+  .about-gallery,
+  .column-left,
+  .column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .column-left, .column-right {
+    grid-template-rows: auto auto; 
+  }
+  .img-wrapper {
+    height: 340px; 
+  }
+
+  /* --- СЛАЙДЕР --- */
+  .slider-arrow {
+    display: none; 
+  }
+  .slider-container {
+    gap: 0; 
+  }
+
+  .mobile-app {
+    padding: 60px 0;
+  }
+  .app-buttons {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  /* --- ФУТЕР --- */
+  .footer {
+    padding: 0 16px 40px 16px;
+  }
+  .footer-container {
+    padding: 60px 16px;
+  }
+
+  /* --- КАТАЛОГ И ТАБЫ --- */
+  .menu-grid {
+    grid-template-columns: 1fr; /* Одна колонка для товаров */
+    gap: 20px;
+  }
+  .menu-tabs {
+    gap: 8px;
+  }
+  .tab-btn {
+    padding: 8px; /* Уменьшаем кнопки табов */
+  }
+  
+  /* --- МОДАЛЬНОЕ ОКНО --- */
+  .modal {
+    padding: 16px;
+    width: 95%;
+  }
+  /* Скрываем картинку в модалке по макету */
+  .modal-img-wrapper {
+    display: none; 
+  }
+  .modal-details {
+    gap: 16px;
+  }
+}
