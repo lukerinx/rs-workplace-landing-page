@@ -1156,3 +1156,39 @@ body.dark-theme .burger-btn span { background-color: #E1D4C9; }
     gap: 16px;
   }
 }
+
+/* ==========================================
+   АДАПТИВ ДЛЯ УСТРОЙСТВ МЕНЬШЕ 380px
+   ========================================== */
+@media (max-width: 379px) {
+  .head {
+    padding: 15px 10px;
+  }
+  
+  .hero-inner {
+    padding: 40px 12px;
+    border-radius: 20px;
+  }
+  
+  .hero-title {
+    font-size: 34px;
+  }
+  
+  .favorite-title,
+  .about-title,
+  .app-title,
+  .menu-title,
+  .footer-title {
+    font-size: 28px;
+  }
+  
+  .footer-container {
+    padding: 40px 16px;
+    border-radius: 20px;
+  }
+
+  .modal {
+    width: 98%;
+    padding: 10px;
+  }
+}
