@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <header class="head">
+    <a href="index.html" class="logo"><img src="imgs/logo (1).png" alt="Logo"></a>
+   
+    <!-- Навигация -->
+<nav class="main-nav" id="main-nav">
+     <ul>
+       <li><a href="index.html#favorite-coffee">Favorite coffee</a></li>
+       <li><a href="index.html#about">About</a></li>
+       <li><a href="index.html#mobile-app">Mobile app</a></li>
+       <li><a href="index.html#contact-us">Contact us</a></li>
+       
+       <!-- ЭТА КНОПКА ПОЯВИТСЯ ТОЛЬКО В БУРГЕРЕ НА МОБИЛКАХ -->
+       <li class="mobile-menu-link">
+         <a href="catalog.html">Menu<img src="imgs/coffee-cup.png" alt="Cup"></a>
+       </li>
+     </ul>
+    </nav>
+  
+    <!-- Кнопка Бургера (появится только на мобилках) -->
+    <div class="burger-btn" id="burger-btn">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="header-actions">
+      <div class="dark-lig">
+        <a href="#" id="theme-light"><img src="imgs/Sun.png" alt="Sun" class="sun"></a>
+        <a href="#" id="theme-dark"><img src="imgs/Moon.svg" alt="Moon" class="moon"></a>
+      </div>
+      <div class="menu">
+        <a href="catalog.html">Menu<img src="imgs/coffee-cup.png" alt="Cup"></a>
+      </div>
+    </div>
+  </header>
+   <main class="menu-page">
+      <h1 class="menu-title">
+        Behind each of our cups<br>hides an <em>amazing surprise</em>
+      </h1>
+
+      <!-- Табы переключения категорий -->
+      <div class="menu-tabs">
+        <button class="tab-btn active">
+          <span class="tab-icon"><img src="imgs/coffe-icon.png" alt="Coffee"></span> Coffee
+        </button>
+        <button class="tab-btn">
+          <span class="tab-icon"><img src="imgs/tea-icon.png" alt="Tea"></span> Tea
+        </button>
+        <button class="tab-btn">
+          <span class="tab-icon"><img src="imgs/dessert.png" alt="Dessert"></span> Dessert
+        </button>
+      </div>
+
+      <!-- ЕДИНСТВЕННАЯ сетка, куда JS будет загружать карточки -->
+      <div class="menu-grid" id="menu-grid"></div>
+
+      <!-- Кнопка загрузки для мобильных экранов -->
+      <button class="load-more-btn hidden" id="load-more-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer" id="contact-us">
+      <div class="footer-container">
+        <!-- Левая часть футера -->
+        <div class="footer-left">
+          <h2 class="footer-title">Sip, Savor, Smile. <br><em>It's coffee time!</em></h2>
+          <div class="socials">
+            <a href="https://twitter.com" target="_blank" class="social-link">
+              <img src="imgs/twitter.png" alt="Twitter">
+            </a>
+            
+            <a href="https://instagram.com" target="_blank" class="social-link">
+              <img src="imgs/instagram.png" alt="Instagram">
+            </a>
+            
+            <a href="https://facebook.com" target="_blank" class="social-link">
+              <img src="imgs/facebook-icon.png" alt="Facebook">
+            </a>
+          </div>
+        </div>
+        
+        <!-- Правая часть футера -->
+        <div class="footer-right">
+          <h3 class="contact-title">Contact us</h3>
+          <ul class="contact-list">
+            <li>
+              <span><img src="imgs/pin-alt (1).svg" alt=""></span> 8558 Green Rd., LA
+            </li>
+            <li>
+              <span><img src="imgs/phone.png" alt=""></span> +1 (603) 555-0123
+            </li>
+            <li>
+              <span><img src="imgs/clock.png" alt=""></span> Mon-Sat: 9:00-23:00
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Оверлей и модальное окно -->
+    <div class="modal-overlay hidden" id="modal-overlay">
+      <div class="modal">
+        <div class="modal-img-wrapper">
+          <img src="imgs/coffee-1.jpg" alt="Irish coffee" id="modal-img">
+        </div>
+        <div class="modal-details">
+          <div>
+            <h3 class="modal-title" id="modal-title">Irish coffee</h3>
+            <p class="modal-desc" id="modal-desc">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+          </div>
+          
+          <!-- Блок размеров -->
+          <div class="modal-section">
+            <span class="modal-subtitle">Size</span>
+            <div class="modal-options" id="modal-sizes">
+              <button class="param-btn active"><span class="param-icon">S</span> 200 ml</button>
+              <button class="param-btn"><span class="param-icon">M</span> 300 ml</button>
+              <button class="param-btn"><span class="param-icon">L</span> 400 ml</button>
+            </div>
+          </div>
+
+          <!-- Блок добавок -->
+          <div class="modal-section">
+            <span class="modal-subtitle">Additives</span>
+            <div class="modal-options" id="modal-additives">
+              <button class="param-btn"><span class="param-icon">1</span> Sugar</button>
+              <button class="param-btn"><span class="param-icon">2</span> Cinnamon</button>
+              <button class="param-btn"><span class="param-icon">3</span> Syrup</button>
+            </div>
+          </div>
+
+          <!-- Итоговая цена -->
+          <div class="modal-total">
+            <span>Total:</span>
+            <span id="modal-price">$7.00</span>
+          </div>
+
+          <!-- Инфо-текст -->
+          <div class="modal-alert">
+            <span>&#9432;</span>
+            <p>The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+          </div>
+
+          <button class="modal-close" id="modal-close">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипт -->
+    <script src="app.js"></script>
+
+</body>
+</html>
